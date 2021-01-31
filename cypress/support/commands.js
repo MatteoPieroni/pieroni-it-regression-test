@@ -34,6 +34,4 @@ Cypress.Commands.add('scrollToBottom', () => {
 Cypress.Commands.add('openSite', () => {
     cy.visit('/');
     cy.contains('Accetta').click();
-
-    cy.scrollToBottom();
 });
