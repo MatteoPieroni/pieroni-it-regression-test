@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "cypress open",
-    "test": "cypress run"
+    "test": "percy exec -- cypress run"
   },
   "author": "Matteo Pieroni",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^6.3.0"
+    "@percy/cypress": "^2.3.4",
+    "cypress": "^6.3.0",
+    "scroll-to-bottomjs": "^1.1.0"
   }
 }
