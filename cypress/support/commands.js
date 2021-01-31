@@ -35,3 +35,22 @@ Cypress.Commands.add('openSite', () => {
     cy.visit('/');
     cy.contains('Accetta').click();
 });
+
+Cypress.Commands.add('visualTestPage', ({ pageName, subPage } = {}) => {
+    cy.openSite();
+    
+    if (typeof subPage === 'string') {
+        cy.contains(subPage, { matchCase: false }).focus();
+    } else if (Array.isArray(subPage)) {
+        subPage.forEach((level) => {
+            cy.contains(level, { matchCase: false }).focus();
+        });
+    }
+
+    cy.contains(pageName, { matchCase: false }).click();
+    
+    cy.scrollToBottom();
+
+    // Take a snapshot for visual diffing
+    cy.percySnapshot();
+});
