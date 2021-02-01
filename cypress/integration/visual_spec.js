@@ -23,7 +23,13 @@ const pagesArray = [
     ['Lucca', 'Dove siamo'],
     'Professionisti',
     'Gli speciali',
-    'Blog'
+    'Blog',
+    'Appuntamento Sala Mostra',
+    'Appuntamento Riscaldamento',
+    'Professionisti Edilizia, Sala Mostra, Riscaldamento',
+    'Appuntamento Rappresentante',
+    'Negozio',
+    'Privacy e Cookie Policy',
 ]
 
 describe("Visual testing", () => {
